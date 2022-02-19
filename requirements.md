@@ -38,7 +38,7 @@ One ZIP or TAR file that includes:
 - SQL queries.sql
 - PythonDBProgram
     - Bokeh HTML
-    - Premade QQLite database
+    - Premade SQLite database
 
 ## Possible problem areas in the project
 - Problems in the modeling and using wrong models in the wrong phases
