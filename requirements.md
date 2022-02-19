@@ -1,7 +1,8 @@
-#Project requirements
+# Project requirements
 
-##Theoretical, design documentation
-###Structure of the document
+## Theoretical, design documentation
+
+### Structure of the document
 - [ ]   Introduction
 - [ ]   ER model and transformation to relational model
 - [ ]   Database implementation.
