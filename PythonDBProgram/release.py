@@ -22,6 +22,10 @@ def gen_release_name():
     
     return name
 
+def gen_releases(amount):
+    for i in range(amount):
+        sql_insert_release(None, gen_release_name(), None, None) 
+
 def print_releases():
     band_id = input("BAND ID: ")
     sql_print_releases(band_id)
