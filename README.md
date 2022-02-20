@@ -28,7 +28,7 @@ This project was made for a university course.
 - [ ]   Database has indices **implemented** that are reasonable (Optional)
 
 #### Returnables
-- [ ]   Report document (PDF)
+- [X]   Report document (PDF)
 - [X]   Python program
 - [X]   SQLite database
 - [X]   Separate text file that includes the necessary SQL commands to create tables for the database (can be run with .read)
