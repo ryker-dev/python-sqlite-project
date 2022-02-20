@@ -4,6 +4,8 @@ import os
 import band
 import member
 import members_in_bands as mib
+import release
+
 from database import sql_connect_to_db
 
 DEBUG = True
@@ -28,11 +30,13 @@ def create_db():
 def print_menu():
     print("\n1: Add band")
     print("2: Add member")
-    print("3: Add member to band\n")
+    print("3: Add member to band")
+    print("4: Add release\n")
 
-    print("4: Print bands")
-    print("5: Print members")
-    print("6: Print band members")
+    print("5: Print bands")
+    print("6: Print members")
+    print("7: Print band members")
+    print("8: Print releases")
     print("0: Quit")
 
 def user_menu():
@@ -48,11 +52,15 @@ def user_menu():
         if action == "3":
             mib.add_relation()
         if action == "4":
-            band.sql_print_bands()     
+            release.insert_release()
         if action == "5":
-            member.sql_print_members()
+            band.sql_print_bands()     
         if action == "6":
+            member.sql_print_members()
+        if action == "7":
             mib.sql_print_mib() 
+        if action == "8":
+            release.print_releases() 
 
 def main():
     create_db()
