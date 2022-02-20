@@ -1,4 +1,4 @@
-from database import *
+from database import connect_to_db
 
 
 def sql_get_publisher_id(publisher_name):

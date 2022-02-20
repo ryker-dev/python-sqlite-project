@@ -1,8 +1,8 @@
 import sqlite3
 import os
 
-from bands import *
-from database import *
+from bands import insert_band
+from database import connect_to_db
 
 from django.template import VariableDoesNotExist
 

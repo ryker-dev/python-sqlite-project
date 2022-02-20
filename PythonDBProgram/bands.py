@@ -1,8 +1,8 @@
 import os
 import random
 
-from publisher import *
-from database import *
+from publisher import sql_get_publisher_id
+from database import connect_to_db
 
 PATH = os.path.dirname(__file__)
 
