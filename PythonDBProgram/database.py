@@ -12,9 +12,9 @@ def create_db():
         commands = ""
         for line in f.readlines():
             commands+=line
-        print("No database detected. Rebuilding...")
         cur.executescript(commands)
-    except sqlite3.OperationalError as err:
+        print("No database detected. Database initialised")
+    except sqlite3.OperationalError:
         print(err)
     except Exception as err:
         print(err)
