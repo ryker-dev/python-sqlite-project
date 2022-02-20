@@ -15,15 +15,15 @@ def insert_band():
         name = gen_band_name()
 
     date = input("date (YYYY/MM/DD): ") or None
-    publisher = input("Publisher: ") or None
+    publisher_id = input("Publisher ID: ") or None
 
     ## Add better input validation
 
-    sql_insert_band(name, publisher, date)
+    sql_insert_band(name, publisher_id, date)
     print(name.capitalize() + " added!")
 
 def gen_bands(amount):
-    for i in range(0,amount):
+    for i in range(amount):
         sql_insert_band(gen_band_name(), None, None) 
 
 def gen_band_name():
@@ -34,13 +34,14 @@ def gen_band_name():
 
 ################ SQL FUNCTIONS ################
 
-def sql_insert_band(name, publisher, date):
+def sql_insert_band(name, publisher_id, date):
     db, cur = sql_connect_to_db()
 
-    if (not publisher == None):
+    '''     if (not publisher == None):
         publisher_id = sql_get_publisher_id(publisher)
     else:
         publisher_id = None
+    '''
 
     cur.execute('''
         INSERT INTO Band (name, publisherID, creationDate) VALUES (?, ?, ?)

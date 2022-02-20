@@ -1,6 +1,6 @@
 from database import sql_connect_to_db
 
-
+## NOT IN USE
 def sql_get_publisher_id(publisher_name):
     db, cur = sql_connect_to_db()
 
