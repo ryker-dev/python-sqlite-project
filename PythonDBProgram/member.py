@@ -9,10 +9,10 @@ PATH = os.path.dirname(__file__)
 def insert_member():
     print("Inserting a new member")
     print("(Enter to autogenerate name)")
-    f_name = input("FIRST NAME: ") or None
-    l_name = input("LAST NAME: ") or None
+    first = input("FIRST NAME: ") or None
+    last = input("LAST NAME: ") or None
 
-    if (f_name ==  None):
+    if (first ==  None):
         first, last = gen_member_name()
 
     ## Add better input validation
