@@ -1,7 +1,6 @@
 import os
-import random
+import names
 
-from publisher import sql_get_publisher_id
 from database import sql_connect_to_db
 
 PATH = os.path.dirname(__file__)
@@ -13,7 +12,7 @@ def insert_member():
     last = input("LAST NAME: ") or None
 
     if (first ==  None):
-        first, last = gen_member_name()
+        first, last = names.gen_member_name()
 
     ## Add better input validation
 
@@ -22,14 +21,9 @@ def insert_member():
 
 def gen_bands(amount):
     for i in range(0,amount):
-        first, last = gen_member_name()
+        first, last = names.gen_member_name()
         sql_insert_member(first, last) 
 
-def gen_member_name():
-    first = random.choice( open(PATH + "/names/members/first.txt").read().splitlines())
-    last = random.choice( open(PATH + "/names/members/last.txt").read().splitlines())
-    
-    return first, last
 
 ################ SQL FUNCTIONS ################
 

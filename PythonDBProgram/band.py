@@ -1,7 +1,6 @@
 import os
-import random
+import names
 
-from publisher import sql_get_publisher_id
 from database import sql_connect_to_db
 
 PATH = os.path.dirname(__file__)
@@ -12,7 +11,7 @@ def insert_band():
     name = input("NAME: ")
 
     if (len(name) < 1):
-        name = gen_band_name()
+        name = names.gen_band_name()
 
     date = input("date (YYYY/MM/DD): ") or None
     publisher_id = input("Publisher ID: ") or None
@@ -24,24 +23,13 @@ def insert_band():
 
 def gen_bands(amount):
     for i in range(amount):
-        sql_insert_band(gen_band_name(), None, None) 
+        sql_insert_band(names.gen_band_name(), None, None) 
 
-def gen_band_name():
-    words = open(PATH + "/names/bands/wordlist.10000").read().splitlines()
-    name = "%s %s"%(random.choice(words), random.choice(words))
-    
-    return name
 
 ################ SQL FUNCTIONS ################
 
 def sql_insert_band(name, publisher_id, date):
     db, cur = sql_connect_to_db()
-
-    '''     if (not publisher == None):
-        publisher_id = sql_get_publisher_id(publisher)
-    else:
-        publisher_id = None
-    '''
 
     cur.execute('''
         INSERT INTO Band (name, publisherID, creationDate) VALUES (?, ?, ?)
