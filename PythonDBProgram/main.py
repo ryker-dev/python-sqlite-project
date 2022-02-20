@@ -1,14 +1,18 @@
 import sqlite3
 import os
-import random
+
+from bands import *
+from database import *
+
+from django.template import VariableDoesNotExist
 
 DEBUG = True
 PATH = os.path.dirname(__file__)
 
-db = sqlite3.connect(PATH + "/db/db.sqlite")
-cur = db.cursor()
-
 def create_db():
+
+    db, cur = connect_to_db()
+
     try:
         f = open(PATH + "/../SQL queries.sql", "r") ## Execution method taken from Topic 6: Python
         commands = ""
@@ -18,30 +22,25 @@ def create_db():
     except sqlite3.OperationalError:
         print("Database already exists, skipping")
     except Exception as err:
-        print(err) 
+        print(err)
+    db.close()
 
-def add_band(name, date):
-    db.execute('''
-        INSERT INTO Band (name, creation_date) VALUES (?, ?)
-    ''', (name, date))
-    db.commit()
+def print_menu():
+    print("\n1: Add band")
+    print("0: Quit")
 
-def gen_bands(amount):
-    if not DEBUG:
-        return
-    for i in range(0,amount):
-        add_band(gen_band_name(), None) 
+def user_menu():
+    action = -1
+    while(action != "0"):
+        print_menu()
+        action = input("Action: ")
 
-def gen_band_name():
-    words = open(PATH + "/../devdoc/wordlist.10000").read().splitlines()
-    name = "%s %s"%(random.choice(words), random.choice(words))
-    
-    return name
-        
+        if action == "1":
+            insert_band()
+
 def main():
     create_db()
-    gen_bands(10)
-    db.close()        
+    user_menu()       
     return None
 
 if __name__ == "__main__":
