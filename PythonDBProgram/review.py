@@ -33,7 +33,8 @@ def sql_insert_review(release_id, first, last, content):
 
     cur.execute('''
         INSERT INTO ReleaseReview (releaseID, firstName, lastName, content) VALUES (?, ?, ?, ?)
-    ''', (random.randint(1,20), first, last, content))
+    ''', (release_id, first, last, content))
+
     db.commit()
     db.close()
 
