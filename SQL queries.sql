@@ -117,3 +117,26 @@ INSERT INTO Publisher (name) VALUES
 	("fatal conservation LTD"),
 	("options partners productions");
 
+INSERT INTO Release (bandID, name) VALUES
+	(1, "lexington"),
+	(2, "planets"),
+	(3, "pushed"),
+	(4, "hearts"),
+	(5, "help"),
+	(6, "complaints"),
+	(7, "retention"),
+	(8, "adjustable"),
+	(9, "normal"),
+	(1, "overseas"),
+	(1, "adult"),
+	(2, "bye"),
+	(3, "conventions"),
+	(4, "battery"),
+	(5, "outstanding"),
+	(6, "experiments"),
+	(7, "excluded"),
+	(8, "approximate"),
+	(9, "wu"),
+	(10, "emergency");
+
+/* INSERT INTO Track (releaseID, name, length) VALUES */
