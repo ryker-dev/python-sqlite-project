@@ -16,7 +16,7 @@ This project was made for a university course.
 - [X]   ER-model should have at least one M:N relationship
 - [X]   Needs to have an ER model as well as a relational model
 - [X]   Define minimum and maximum cardinalities and integrity constraints
-- [ ]   At least five different queries or views need to be developed
+- [X]   At least five different queries or views need to be developed
 - [X]   Two JOIN-clauses need to be used in at least one query
 - [X]   Justification and planning for the use of indices
 
