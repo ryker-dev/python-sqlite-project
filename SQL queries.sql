@@ -58,4 +58,26 @@ INSERT INTO Band (name) VALUES
 	("yea immune"),
 	("component drivers"),
 	("till intended"),
-	("near perform"),
+	("near perform");
+
+INSERT INTO Member (firstName, lastName) VALUES
+	('Thad', 'Hubbartt'),
+	('Daniela', 'Ephriam'),
+	('Kermit', 'Offret'),
+	('Valeri', 'Friday'),
+	('Josephina', 'Jacobus'),
+	('Cathey', 'Detone'),
+	('Sherryl', 'Lesa'),
+	('Zenia', 'Mccord'),
+	('Sheena', 'Yankee'),
+	('Vivan', 'Bazil'),
+	('Sherri', 'Prosch'),
+	('Le', 'Betit'),
+	('Ceola', 'Nahl'),
+	('Lenora', 'Daichendt'),
+	('Dalton', 'Romaine'),
+	('Brande', 'Mangina'),
+	('Renata', 'Wolnik'),
+	('Teodoro', 'Millimaki'),
+	('Zella', 'Yusef'),
+	('Breann', 'Zilka');
