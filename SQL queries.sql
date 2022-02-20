@@ -10,7 +10,7 @@ CREATE TABLE "Band" (
 	"bandID"	INTEGER NOT NULL UNIQUE,
 	"publisherID"	INTEGER,
 	"name"	VARCHAR(50),
-	"creation_date"	VARCHAR(50),
+	"creationDate"	VARCHAR(50),
 	FOREIGN KEY("publisherID") REFERENCES "Publisher"("publisherID") ON DELETE CASCADE,
 	PRIMARY KEY("bandID")
 );

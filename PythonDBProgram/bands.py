@@ -43,7 +43,7 @@ def sql_insert_band(name, publisher, date):
         publisher_id = None
 
     cur.execute('''
-        INSERT INTO Band (name, publisherID, creation_date) VALUES (?, ?, ?)
+        INSERT INTO Band (name, publisherID, creationDate) VALUES (?, ?, ?)
     ''', (name, publisher_id, date))
     db.commit()
     db.close()
