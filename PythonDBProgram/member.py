@@ -2,7 +2,7 @@ import os
 import random
 
 from publisher import sql_get_publisher_id
-from database import connect_to_db
+from database import sql_connect_to_db
 
 PATH = os.path.dirname(__file__)
 
@@ -34,10 +34,20 @@ def gen_member_name():
 ################ SQL FUNCTIONS ################
 
 def sql_insert_member(first, last):
-    db, cur = connect_to_db()
+    db, cur = sql_connect_to_db()
 
     cur.execute('''
         INSERT INTO Member (firstName, lastName) VALUES (?, ?)
     ''', (first, last))
     db.commit()
+    db.close()
+
+def sql_print_members():
+    db, cur = sql_connect_to_db()
+
+    cur.execute("SELECT * FROM Member;")
+
+    for item in cur.fetchall():
+        print(item)
+    
     db.close()

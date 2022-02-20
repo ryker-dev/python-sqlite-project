@@ -1,8 +1,8 @@
-from database import connect_to_db
+from database import sql_connect_to_db
 
 
 def sql_get_publisher_id(publisher_name):
-    db, cur = connect_to_db()
+    db, cur = sql_connect_to_db()
 
     cur.execute('''
         SELECT publisherID FROM Publisher

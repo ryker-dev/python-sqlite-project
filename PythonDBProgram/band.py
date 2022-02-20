@@ -2,7 +2,7 @@ import os
 import random
 
 from publisher import sql_get_publisher_id
-from database import connect_to_db
+from database import sql_connect_to_db
 
 PATH = os.path.dirname(__file__)
 
@@ -35,7 +35,7 @@ def gen_band_name():
 ################ SQL FUNCTIONS ################
 
 def sql_insert_band(name, publisher, date):
-    db, cur = connect_to_db()
+    db, cur = sql_connect_to_db()
 
     if (not publisher == None):
         publisher_id = sql_get_publisher_id(publisher)
@@ -46,4 +46,27 @@ def sql_insert_band(name, publisher, date):
         INSERT INTO Band (name, publisherID, creationDate) VALUES (?, ?, ?)
     ''', (name, publisher_id, date))
     db.commit()
+    db.close()
+
+def sql_get_band_id(band_name):
+    db, cur = sql_connect_to_db()
+
+    cur.execute('''
+        SELECT bandID FROM Band
+        WHERE ? = name;
+    ''', (band_name,))
+
+    name = cur.fetchone
+    db.close()
+
+    return len(name) < 1 and name or None
+
+def sql_print_bands():
+    db, cur = sql_connect_to_db()
+
+    cur.execute("SELECT * FROM Band;")
+
+    for item in cur.fetchall():
+        print(item)
+    
     db.close()
