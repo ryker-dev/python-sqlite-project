@@ -46,6 +46,7 @@ def sql_print_reviews(release_id):
         WHERE ? = releaseID;
     ''', (release_id,))
 
+    print("\reviewID | releaseID | firstName | lastName | content")
     for item in cur.fetchall():
         print(item)
 
