@@ -47,3 +47,15 @@ CREATE TABLE "Track" (
 	FOREIGN KEY("releaseID") REFERENCES "Release"("releaseID") ON DELETE CASCADE,
 	PRIMARY KEY("trackID")
 );
+
+INSERT INTO Band (name) VALUES
+	("agency you"),
+	("reach residents"),
+	("limit harmful"),
+	("agency you"),
+	("vast gravity"),
+	("whole pop"),
+	("yea immune"),
+	("component drivers"),
+	("till intended"),
+	("near perform"),
