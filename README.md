@@ -7,17 +7,17 @@ This project was made for a university course.
 
 ### Structure of the document
 - [ ]   Introduction
-- [ ]   ER model and transformation to relational model
+- [X]   ER model and transformation to relational model
 - [ ]   Database implementation.
 - [ ]   Discussion, reflection and conclusion. 
 
 ### Design requirements
-- [ ]   ER model and database should have at least 6 entities
-- [ ]   ER-model should have at least one M:N relationship
-- [ ]   Needs to have an ER model as well as a relational model
-- [ ]   Define minimum and maximum cardinalities and integrity constraints
+- [X]   ER model and database should have at least 6 entities
+- [X]   ER-model should have at least one M:N relationship
+- [X]   Needs to have an ER model as well as a relational model
+- [X]   Define minimum and maximum cardinalities and integrity constraints
 - [ ]   At least five different queries or views need to be developed
-- [ ]   Two JOIN-clauses need to be used in at least one query
+- [X]   Two JOIN-clauses need to be used in at least one query
 - [ ]   The use of indices with justification
 
 ### Practical part
