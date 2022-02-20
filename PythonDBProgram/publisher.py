@@ -5,8 +5,8 @@ def sql_get_publisher_id(publisher_name):
     db, cur = connect_to_db()
 
     cur.execute('''
-        SELECT name FROM Publisher
-        WHERE ? = publisherID;
+        SELECT publisherID FROM Publisher
+        WHERE ? = name;
     ''', (publisher_name,))
 
     name = cur.fetchone
