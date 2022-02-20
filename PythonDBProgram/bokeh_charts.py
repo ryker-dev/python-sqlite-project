@@ -4,7 +4,7 @@ from bokeh.plotting import figure
 from numpy import append
 from release import sql_get_release_counts
 
-output_file("bokeh.html")
+output_file("./PythonDBProgram/bokeh.html")
 
 def bk_band_releases():
     query = sql_get_release_counts()
