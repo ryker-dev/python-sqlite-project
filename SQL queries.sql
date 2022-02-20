@@ -42,7 +42,7 @@ CREATE TABLE "Release" (
 CREATE TABLE "Track" (
 	"trackID"	INTEGER NOT NULL UNIQUE,
 	"releaseID"	INTEGER NOT NULL,
-	"NAME"	VARCHAR(50),
+	"name"	VARCHAR(50),
 	"length"	INTEGER,
 	FOREIGN KEY("releaseID") REFERENCES "Release"("releaseID") ON DELETE CASCADE,
 	PRIMARY KEY("trackID")
