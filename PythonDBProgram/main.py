@@ -1,4 +1,3 @@
-import sqlite3
 import os
 
 import band
@@ -8,6 +7,7 @@ import release
 import track
 import database
 import review
+import bokeh_charts as bk
 
 from database import sql_connect_to_db
 
@@ -70,7 +70,8 @@ def user_menu():
 
 def main():
     database.create_db()
-    user_menu()       
+    bk.bk_band_releases()
+    ''' user_menu()  '''      
     return None
 
 if __name__ == "__main__":

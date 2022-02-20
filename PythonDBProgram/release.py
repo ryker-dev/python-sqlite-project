@@ -50,3 +50,16 @@ def sql_insert_release(band_id, name, release_type, date):
 
     db.commit()
     db.close()
+
+def sql_get_release_counts():
+    db, cur = sql_connect_to_db()
+
+    cur.execute('''
+        SELECT Band.bandID, Band.name, COUNT(Release.name) FROM Band
+        INNER JOIN Release ON Band.bandID = Release.bandID
+        GROUP BY Band.bandID;
+    ''')
+
+    ret = cur.fetchall()
+    db.close()
+    return ret
