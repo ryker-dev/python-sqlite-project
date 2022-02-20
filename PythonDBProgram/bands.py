@@ -20,14 +20,14 @@ def insert_band():
     ## Add better input validation
 
     sql_insert_band(name, publisher, date)
-    print("Band added!")
+    print(name.capitalize() + " added!")
 
 def gen_bands(amount):
     for i in range(0,amount):
         sql_insert_band(gen_band_name(), None, None) 
 
 def gen_band_name():
-    words = open(PATH + "/../devdoc/wordlist.10000").read().splitlines()
+    words = open(PATH + "/names/bands/wordlist.10000").read().splitlines()
     name = "%s %s"%(random.choice(words), random.choice(words))
     
     return name
