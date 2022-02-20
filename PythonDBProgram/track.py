@@ -1,5 +1,4 @@
 import os
-from platform import release
 import random
 from database import sql_connect_to_db
 
