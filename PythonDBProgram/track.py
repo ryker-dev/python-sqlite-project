@@ -39,10 +39,11 @@ def sql_print_tracks(release_id):
     db, cur = sql_connect_to_db()
 
     cur.execute('''
-        SELECT name, type FROM Track
+        SELECT * FROM Track
         WHERE ? = releaseID;
     ''', (release_id,))
 
+    print("\ntrackID | releaseID | name | type | length")
     for item in cur.fetchall():
         print(item)
     

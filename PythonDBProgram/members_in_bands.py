@@ -25,8 +25,6 @@ def sql_add_relation(band_id, member_id):
 def sql_print_mib():
     db, cur = sql_connect_to_db()
 
-    """ cur.execute("SELECT * FROM MembersInBands;") """
-
     print("\nBand | Member")
     cur.execute('''
         SELECT Band.name, COALESCE(Member.firstName, '') || COALESCE(" ", '') ||COALESCE(Member.lastName, '') AS memberName FROM Band

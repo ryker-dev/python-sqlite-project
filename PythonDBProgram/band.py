@@ -65,6 +65,7 @@ def sql_get_band_id(band_name):
 def sql_print_bands():
     db, cur = sql_connect_to_db()
 
+    print("\nbandID | publisherID | name | creationDate | ")
     cur.execute("SELECT * FROM Band;")
 
     for item in cur.fetchall():

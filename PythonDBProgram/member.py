@@ -45,6 +45,7 @@ def sql_insert_member(first, last):
 def sql_print_members():
     db, cur = sql_connect_to_db()
 
+    print("\nmemberID | firstName | lastName")
     cur.execute("SELECT * FROM Member;")
 
     for item in cur.fetchall():

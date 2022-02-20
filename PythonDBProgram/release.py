@@ -35,8 +35,9 @@ def print_releases():
 def sql_print_releases(band_id):
     db, cur = sql_connect_to_db()
 
+    print("\nrealeaseID | bandID | name | type | date")
     cur.execute('''
-        SELECT name, type FROM Release
+        SELECT * FROM Release
         WHERE ? = bandID;
     ''', (band_id,))
 
