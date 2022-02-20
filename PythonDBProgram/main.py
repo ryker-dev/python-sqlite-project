@@ -2,6 +2,7 @@ import sqlite3
 import os
 
 from bands import insert_band
+from members import insert_member
 from database import connect_to_db
 
 from django.template import VariableDoesNotExist
@@ -27,6 +28,7 @@ def create_db():
 
 def print_menu():
     print("\n1: Add band")
+    print("2: Add member")
     print("0: Quit")
 
 def user_menu():
@@ -37,6 +39,8 @@ def user_menu():
 
         if action == "1":
             insert_band()
+        if action == "2":
+            insert_member()            
 
 def main():
     create_db()
