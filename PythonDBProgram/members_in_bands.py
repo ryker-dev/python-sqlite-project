@@ -22,15 +22,21 @@ def sql_add_relation(band_id, member_id):
     db.commit()
     db.close()
 
-def sql_print_relations():
+def sql_print_mib():
     db, cur = sql_connect_to_db()
 
     """ cur.execute("SELECT * FROM MembersInBands;") """
+
+    print("Band | First name | Last Name")
     cur.execute('''
-        SELECT * FROM 
+        SELECT Band.name, COALESCE(Member.firstName, '') || COALESCE(" ", '') ||COALESCE(Member.lastName, '') AS memberName FROM Band
+        INNER JOIN MembersInBands ON Band.bandID = MembersInBands.bandID
+        INNER JOIN Member ON MembersInBands.memberID = Member.memberID
+        GROUP BY name, firstName;
     ''')
 
     for item in cur.fetchall():
         print(item)
+    
     
     db.close()

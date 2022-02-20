@@ -52,7 +52,7 @@ def user_menu():
         if action == "5":
             member.sql_print_members()
         if action == "6":
-            mib.sql_print_relations() 
+            mib.sql_print_mib() 
 
 def main():
     create_db()
