@@ -6,3 +6,5 @@ PythonDBProgram/db
 __pycache__
 *.exe
 bokeh.html
+*.zip
+*.pdf
