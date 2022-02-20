@@ -36,7 +36,7 @@ CREATE TABLE "Release" (
 	"type"	VARCHAR(50),
 	"date"	VARCHAR(50),
 	PRIMARY KEY("releaseID"),
-	FOREIGN KEY("bandID") REFERENCES "Band"("bandID")
+	FOREIGN KEY("bandID") REFERENCES "Band"("bandID") ON DELETE CASCADE;
 );
 
 CREATE TABLE "Track" (
