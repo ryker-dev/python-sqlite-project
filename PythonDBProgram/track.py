@@ -5,7 +5,7 @@ from database import sql_connect_to_db
 
 PATH = os.path.dirname(__file__)
 
-def insert_release():
+def insert_track():
     print("Inserting a new track")
     release_id = input("RELEASE ID: ") or None
     print("(Enter to autogenerate name)")
