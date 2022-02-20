@@ -1,5 +1,6 @@
 import sqlite3
 import os
+import random
 
 DEBUG = True
 PATH = os.path.dirname(__file__)
@@ -25,8 +26,21 @@ def add_band(name, date):
     ''', (name, date))
     db.commit()
 
+def gen_bands(amount):
+    if not DEBUG:
+        return
+    for i in range(0,amount):
+        add_band(gen_band_name(), None) 
+
+def gen_band_name():
+    words = open(PATH + "/../devdoc/wordlist.10000").read().splitlines()
+    name = "%s %s"%(random.choice(words), random.choice(words))
+    
+    return name
+        
 def main():
     create_db()
+    gen_bands(10)
     db.close()        
     return None
 
