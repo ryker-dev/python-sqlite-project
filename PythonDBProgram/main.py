@@ -7,10 +7,10 @@ import members_in_bands as mib
 import release
 import track
 import database
+import review
 
 from database import sql_connect_to_db
 
-DEBUG = True
 PATH = os.path.dirname(__file__)
 
 def print_menu():
@@ -18,13 +18,15 @@ def print_menu():
     print("2: Add member")
     print("3: Add member to band")
     print("4: Add release")
-    print("5: Add track\n")
+    print("5: Add track")
+    print("6: Add review\n")
 
-    print("6: Print bands")
-    print("7: Print members")
-    print("8: Print band members")
-    print("9: Print releases")
-    print("10: Print tracks")
+    print("7: Print bands")
+    print("8: Print members")
+    print("9: Print band members")
+    print("10: Print releases")
+    print("11: Print tracks")
+    print("12: Print reviews")
     print("0: Quit")
 
 def user_menu():
@@ -32,6 +34,9 @@ def user_menu():
     while(action != "0"):
         print_menu()
         action = input("Action: ")
+
+        if action == "0":
+            return
 
         ##Inserts
         if action == "1":
@@ -44,18 +49,24 @@ def user_menu():
             release.insert_release()
         if action == "5":
             track.insert_track()
+        if action == "6":
+            review.insert_review()
 
         ##Prints
-        if action == "6":
-            band.sql_print_bands()     
         if action == "7":
-            member.sql_print_members()
+            band.sql_print_bands()     
         if action == "8":
-            mib.sql_print_mib() 
+            member.sql_print_members()
         if action == "9":
-            release.print_releases() 
+            mib.sql_print_mib() 
         if action == "10":
+            release.print_releases() 
+        if action == "11":
             track.print_tracks() 
+        if action == "12":
+            review.print_reviews()
+
+        input("Press enter to continue")
 
 def main():
     database.create_db()

@@ -53,7 +53,8 @@ CREATE TABLE "Track" (
 CREATE TABLE "ReleaseReview" (
 	"reviewID"	INTEGER NOT NULL UNIQUE,
 	"releaseID"	INTEGER NOT NULL,
-	"reviewer" VARCHAR(50),
+	"firstName" VARCHAR(50),
+	"lastName" VARCHAR(50),
 	"content"	TEXT,
 	FOREIGN KEY("releaseID") REFERENCES "Release"("releaseID"),
 	PRIMARY KEY("reviewID")
@@ -192,3 +193,25 @@ INSERT INTO Track (releaseID, name, length) VALUES
 	(10, "covered", 743),
 	(1, "danish", 536),
 	(2, "sake", 612);
+
+INSERT INTO ReleaseReview (releaseID, firstName, lastName, content) VALUES
+	(8,	"Lakisha", "Brugal", "Wasn't very good"),
+	(11, "Toni", "Ruschmeyer", "Didn't really like it"),
+	(3,	"Kathyrn",	"Payment", "Didn't really like it"),
+	(11, "Zetta", "Eiesland", "Didn't really like it"),
+	(3,	"Mirian", "Broudy", "Wasn't very good"),
+	(11, "Paulita", "Antolini", "Didn't really like it"),
+	(4,	"Willard", "Aresco", "Wasn't very good"),
+	(2,	"Amanda", "Gaar", "Meh"),
+	(15, "Nona", "Hritz", "Meh"),
+	(8,	"Lazaro", "Hurse", "Wasn't very good"),
+	(9,	"Krissy", "Kulhanek", "Didn't really like it"),
+	(8,	"Alyson", "Faulkes", "Wasn't very good"),
+	(5,	"Sheilah", "Renzo", "Wasn't very good"),
+	(5,	"Doris", "Pfieffer", "Hate it"),
+	(6,	"Rufina", "Lassetter", "Would have preferred something else"),
+	(19, "Jacelyn", "Gafford", "Loved it!"),
+	(5,	"Marna", "Tobe", "Wasn't very good"),
+	(2,	"Alyce", "Bergeson", "Hate it"),
+	(11, "Genesis", "Lagasse", "Meh"),
+	(6, "Doloris", "Brownson", "Was very good!");
