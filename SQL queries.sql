@@ -109,3 +109,11 @@ INSERT INTO MembersInBands (bandID, memberID) VALUES
 	(9,11),
 	(10,19),
 	(10,20);
+
+INSERT INTO Publisher (name) VALUES
+	("cent cells LTD"),
+	("near perform productions"),
+	("coming revolution LTD"),
+	("fatal conservation LTD"),
+	("options partners productions");
+
