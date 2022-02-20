@@ -47,7 +47,7 @@ Database management can be done through the commandline tool or through the prog
 - [X]   SQLite database
 - [X]   Separate text file that includes the necessary SQL commands to create tables for the database (can be run with .read)
 - [X]   HTML file created by bokeh (if generated)
-- [ ]   Video demonstration
+- [X]   Video demonstration
 
 #### Format
 One ZIP or TAR file that includes:
