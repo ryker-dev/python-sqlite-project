@@ -27,7 +27,7 @@ def sql_print_mib():
 
     """ cur.execute("SELECT * FROM MembersInBands;") """
 
-    print("Band | First name | Last Name")
+    print("\nBand | Member")
     cur.execute('''
         SELECT Band.name, COALESCE(Member.firstName, '') || COALESCE(" ", '') ||COALESCE(Member.lastName, '') AS memberName FROM Band
         INNER JOIN MembersInBands ON Band.bandID = MembersInBands.bandID

@@ -45,6 +45,7 @@ def user_menu():
         print_menu()
         action = input("Action: ")
 
+        ##Inserts
         if action == "1":
             band.insert_band()
         if action == "2":
@@ -53,6 +54,8 @@ def user_menu():
             mib.add_relation()
         if action == "4":
             release.insert_release()
+
+        ##Prints
         if action == "5":
             band.sql_print_bands()     
         if action == "6":
