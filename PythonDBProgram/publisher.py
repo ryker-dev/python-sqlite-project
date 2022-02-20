@@ -4,7 +4,7 @@ from database import connect_to_db
 def sql_get_publisher_id(publisher_name):
     db, cur = connect_to_db()
 
-    db.execute('''
+    cur.execute('''
         SELECT name FROM Publisher
         WHERE ? = publisherID;
     ''', (publisher_name,))
