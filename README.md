@@ -1,3 +1,6 @@
+# SQLite database with Python3 3.9.x
+This project was made for a university course.
+
 # Project requirements
 
 ## Theoretical, design documentation
