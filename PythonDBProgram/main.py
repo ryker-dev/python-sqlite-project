@@ -26,7 +26,9 @@ def print_menu():
     print("9: Print band members")
     print("10: Print releases")
     print("11: Print tracks")
-    print("12: Print reviews")
+    print("12: Print reviews\n")
+
+    print("13: Update band name")
     print("0: Quit")
 
 def user_menu():
@@ -66,12 +68,15 @@ def user_menu():
         if action == "12":
             review.print_reviews()
 
+        ## Update
+        if action == "13":
+            band.update_band_name()
+
         input("Press enter to continue")
 
 def main():
     database.create_db()
-    bk.bk_band_releases()
-    ''' user_menu()  '''      
+    user_menu()   
     return None
 
 if __name__ == "__main__":

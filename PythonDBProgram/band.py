@@ -21,6 +21,21 @@ def insert_band():
     sql_insert_band(name, publisher_id, date)
     print(name.capitalize() + " added!")
 
+def update_band_name():
+    print("Updating a band")
+    band_id = input("BAND ID: ") or None
+
+    if band_id == None:
+        print("Invalid band ID!")
+        return
+
+    name = input("ENTER NEW NAME: ") or None
+
+    ## Add better input validation
+
+    sql_update_name(band_id, name)
+    print("Band name updated!")
+
 def gen_bands(amount):
     for i in range(amount):
         sql_insert_band(names.gen_band_name(), None, None) 
@@ -37,6 +52,7 @@ def sql_insert_band(name, publisher_id, date):
     db.commit()
     db.close()
 
+## NOT USED
 def sql_get_band_id(band_name):
     db, cur = sql_connect_to_db()
 
@@ -59,4 +75,15 @@ def sql_print_bands():
     for item in cur.fetchall():
         print(item)
     
+    db.close()
+
+def sql_update_name(band_id, name):
+    db, cur = sql_connect_to_db()
+
+    cur.execute('''
+        UPDATE Band SET name = ?
+        WHERE ? = Band.bandID;
+    ''', (name, band_id))
+
+    db.commit()
     db.close()
