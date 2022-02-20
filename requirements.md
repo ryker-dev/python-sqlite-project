@@ -28,7 +28,7 @@
 - [ ]   Report document (PDF)
 - [ ]   Python program
 - [ ]   SQLite database
-- [ ]   Separate text file that includes the necessary SQL commands to create tables for the database
+- [ ]   Separate text file that includes the necessary SQL commands to create tables for the database (can be run with .read)
 - [ ]   HTML file created by bokeh (if generated)
 - [ ]   Video demonstration
 
