@@ -1,6 +1,20 @@
 # SQLite database with Python3 3.9.x
 This project was made for a university course.
+## Usage
+Download the source files and run _main.py_
+```
+git clone https://github.com/ryker-dev/python-sqlite-project.git
+python .\PythonDBProgram\main.py
+```
 
+### Database
+If no database exists, the Python application will initialise it for you.  
+The database can also be created through the SQLite3 commandline tool using _.read_
+```
+.read "SQL queries.sql"
+```
+
+Database management can be done through the commandline tool or through the program.
 # Project requirements
 
 ## Theoretical, design documentation
