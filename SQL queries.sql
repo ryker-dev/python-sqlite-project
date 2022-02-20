@@ -48,17 +48,17 @@ CREATE TABLE "Track" (
 	PRIMARY KEY("trackID")
 );
 
-INSERT INTO Band (name) VALUES
-	("agency you"),
-	("reach residents"),
-	("limit harmful"),
-	("agency you"),
-	("vast gravity"),
-	("whole pop"),
-	("yea immune"),
-	("component drivers"),
-	("till intended"),
-	("near perform");
+INSERT INTO Band (name, publisherID) VALUES
+	("agency you", NULL),
+	("reach residents", 1),
+	("limit harmful", 3),
+	("agency you", 5),
+	("vast gravity", NULL),
+	("whole pop", NULL),
+	("yea immune", 1),
+	("component drivers", 2),
+	("till intended", NULL),
+	("near perform", 5);
 
 INSERT INTO Member (firstName, lastName) VALUES
 	('Thad', 'Hubbartt'),
