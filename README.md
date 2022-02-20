@@ -6,10 +6,10 @@ This project was made for a university course.
 ## Theoretical, design documentation
 
 ### Structure of the document
-- [ ]   Introduction
+- [X]   Introduction
 - [X]   ER model and transformation to relational model
-- [ ]   Database implementation.
-- [ ]   Discussion, reflection and conclusion. 
+- [X]   Database implementation.
+- [X]   Discussion, reflection and conclusion. 
 
 ### Design requirements
 - [X]   ER model and database should have at least 6 entities
@@ -18,21 +18,21 @@ This project was made for a university course.
 - [X]   Define minimum and maximum cardinalities and integrity constraints
 - [ ]   At least five different queries or views need to be developed
 - [X]   Two JOIN-clauses need to be used in at least one query
-- [ ]   The use of indices with justification
+- [X]   Justification and planning for the use of indices
 
 ### Practical part
-- [ ]   Python program has at least 5 queries, 1 insert, 1 update and 1 bokeh-visualization
-- [ ]   Database can be tested and used through SQLite and Python user interface
-- [ ]   Python program demonstrates how to read data, update existing or insert new data
-- [ ]   Database implements integrity constraints with CASCADE and similar commands
-- [ ]   Database has indices that are reasonable
+- [X]   Python program has at least 5 queries, 1 insert, 1 update and 1 bokeh-visualization
+- [X]   Database can be tested and used through SQLite and Python user interface
+- [X]   Python program demonstrates how to read data, update existing or insert new data
+- [X]   Database implements integrity constraints with CASCADE and similar commands
+- [ ]   Database has indices **implemented** that are reasonable (Optional)
 
 #### Returnables
 - [ ]   Report document (PDF)
-- [ ]   Python program
-- [ ]   SQLite database
-- [ ]   Separate text file that includes the necessary SQL commands to create tables for the database (can be run with .read)
-- [ ]   HTML file created by bokeh (if generated)
+- [X]   Python program
+- [X]   SQLite database
+- [X]   Separate text file that includes the necessary SQL commands to create tables for the database (can be run with .read)
+- [X]   HTML file created by bokeh (if generated)
 - [ ]   Video demonstration
 
 #### Format
