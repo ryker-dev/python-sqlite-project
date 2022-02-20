@@ -19,6 +19,12 @@ def create_db():
     except Exception as err:
         print(err) 
 
+def add_band(name, date):
+    db.execute('''
+        INSERT INTO Band (name, creation_date) VALUES (?, ?)
+    ''', (name, date))
+    db.commit()
+
 def main():
     create_db()
     db.close()        
