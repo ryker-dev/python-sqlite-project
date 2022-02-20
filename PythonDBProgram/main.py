@@ -6,27 +6,12 @@ import member
 import members_in_bands as mib
 import release
 import track
+import database
 
 from database import sql_connect_to_db
 
 DEBUG = True
 PATH = os.path.dirname(__file__)
-
-def create_db():
-
-    db, cur = sql_connect_to_db()
-
-    try:
-        f = open(PATH + "/../SQL queries.sql", "r") ## Execution method taken from Topic 6: Python
-        commands = ""
-        for line in f.readlines():
-            commands+=line
-        cur.executescript(commands)
-    except sqlite3.OperationalError:
-        print("Database already exists, skipping")
-    except Exception as err:
-        print(err)
-    db.close()
 
 def print_menu():
     print("\n1: Add band")
@@ -73,7 +58,7 @@ def user_menu():
             track.print_tracks() 
 
 def main():
-    create_db()
+    database.create_db()
     user_menu()       
     return None
 
