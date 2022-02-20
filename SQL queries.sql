@@ -1,3 +1,5 @@
+/* .read "SQL queries.sql" */
+
 /* TABLE CREATION */
 
 CREATE TABLE "Publisher" (
@@ -139,4 +141,44 @@ INSERT INTO Release (bandID, name) VALUES
 	(9, "wu"),
 	(10, "emergency");
 
-/* INSERT INTO Track (releaseID, name, length) VALUES */
+INSERT INTO Track (releaseID, name, length) VALUES
+	(1, "hull", 120),
+	(2, "sarah", 156),
+	(3, "notre", 230),
+	(4, "bug", 265),
+	(5, "ct", 521),
+	(6, "investigator", 321),
+	(7, "santa", 521),
+	(8, "poetry", 531),
+	(9, "base", 562),
+	(10, "declined", 242),
+	(1, "drew", 324),
+	(1, "mobility", 443),
+	(2, "fought", 222),
+	(3, "nos", 252),
+	(3, "repairs", 623),
+	(3, "heard", 732),
+	(3, "missing", 654),
+	(4, "suffered", 963),
+	(4, "broke", 534),
+	(4, "partnership", 564),
+	(4, "destinations", 234),
+	(4, "numerous", 532),
+	(4, "width", 214),
+	(3, "vehicles", 423),
+	(5, "baptist", 532),
+	(4, "reflection", 664),
+	(5, "fisheries", 443),
+	(6, "llp", 432),
+	(6, "because", 532),
+	(5, "anticipated", 431),
+	(5, "students", 532),
+	(6, "ro", 423),
+	(7, "steven", 421),
+	(7, "writings", 233),
+	(8, "outstanding", 322),
+	(9, "division", 652),
+	(9, "dod", 762),
+	(10, "covered", 743),
+	(1, "danish", 536),
+	(2, "sake", 612);
