@@ -50,6 +50,16 @@ CREATE TABLE "Track" (
 	PRIMARY KEY("trackID")
 );
 
+CREATE TABLE "ReleaseReview" (
+	"reviewID"	INTEGER NOT NULL UNIQUE,
+	"releaseID"	INTEGER NOT NULL,
+	"reviewer" VARCHAR(50),
+	"content"	TEXT,
+	FOREIGN KEY("releaseID") REFERENCES "Release"("releaseID"),
+	PRIMARY KEY("reviewID")
+);
+
+
 INSERT INTO Band (name, publisherID) VALUES
 	("agency you", NULL),
 	("reach residents", 1),
