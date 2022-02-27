@@ -14,7 +14,7 @@ def create_db():
             commands+=line
         cur.executescript(commands)
         print("No database detected. Database initialised")
-    except sqlite3.OperationalError:
+    except sqlite3.OperationalError as err:
         print(err)
     except Exception as err:
         print(err)
